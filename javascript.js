@@ -1,8 +1,20 @@
-const container = document.getElementById("container"); // To Select the HTML div container
+const container = document.getElementById("container"); // Select the HTML div container
 
-// To create the 16 * 16 divs
-for (let i = 0; i < 16 * 16; i++) { //loop to create 16 * 16 divs (= 256 divs)
+// Create the 16 * 16 grid
+for (let i = 0; i < 16 * 16; i++) {  
   const square = document.createElement("div");
-  square.classList.add("square"); // Adds the class "square" to the newly created <div>
+  square.classList.add("square"); // Adds the class "square" to the new div
+
+  // Change color on hover
+  square.addEventListener("mouseenter", () => {
+    square.style.backgroundColor = "#333"; // Change to any color
+  });
+
+  // Revert color when mouse leaves
+  square.addEventListener("mouseleave", () => {
+    square.style.backgroundColor = "lightgray"; // Reset to original color
+  });
+
   container.appendChild(square);
 }
+
