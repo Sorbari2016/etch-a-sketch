@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;  /* Ensures squares wrap into multiple rows */
+  width: 100vw;     /* Full viewport width */
+  height: 100vh;    /* Full viewport height */
+}
+
+.square {
+  width: calc(100vw / 16);  /* 1/16th of viewport width */
+  height: calc(100vh / 16); /* 1/16th of viewport height */
+  border: 1px solid #ddd;   /* Optional: adds visible grid lines */
+  background-color: lightgray;
+}
+
+  
