@@ -4,33 +4,33 @@
   box-sizing: border-box;
 }
 
-
-
 #resizeBtn {
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
   margin-bottom: 10px;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 #container {
   display: flex;
-  flex-wrap: wrap; /* Allows squares to wrap into rows */
+  flex-wrap: wrap;
   width: 480px;  /* Fixed width */
   height: 480px; /* Fixed height */
-  background-color: black; /* Background to see the grid better */
+  background-color: black;
   border: 2px solid black;
+  --grid-size: 16; /* Default grid size */
+  margin-left: 10px;
 }
 
 .square {
-  width: calc(100% / 16); /* Divides width into 16 equal parts */
-  height: calc(100% / 16); /* Divides height into 16 equal parts */
-  border: 1px solid #ddd; /* Optional: adds visible grid lines */
+  width: calc(100% / var(--grid-size));  /* Uses CSS variable for dynamic grid size */
+  height: calc(100% / var(--grid-size)); /* Ensures square shape */
+  border: 1px solid #ddd;
   background-color: lightgray;
-  box-sizing: border-box; /* Ensures borders don't affect sizing */
+  box-sizing: border-box;
 }
-
 
 
   
