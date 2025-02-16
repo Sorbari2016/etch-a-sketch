@@ -7,7 +7,7 @@ for (let i = 0; i < 16 * 16; i++) {
 
   // Change color on hover
   square.addEventListener("mouseenter", () => {
-    square.style.backgroundColor = "#333"; // Change to any color
+    square.style.backgroundColor = "#333"; // Once mouse is placed color should change
   });
 
   // Revert color when mouse leaves

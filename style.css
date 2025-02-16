@@ -4,25 +4,22 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 #container {
   display: flex;
-  flex-wrap: wrap;  /* Ensures squares wrap into multiple rows */
-  width: 100vw;     /* Full viewport width */
-  height: 100vh;    /* Full viewport height */
+  flex-wrap: wrap; /* Allows squares to wrap into rows */
+  width: 400px;  /* Fixed width */
+  height: 400px; /* Fixed height */
+  background-color: black; /* Background to see the grid better */
+  border: 2px solid black;
 }
 
 .square {
-  width: calc(100vw / 16);  /* 1/16th of viewport width */
-  height: calc(100vh / 16); /* 1/16th of viewport height */
-  border: 1px solid #ddd;   /* Optional: adds visible grid lines */
+  width: calc(100% / 16); /* Divides width into 16 equal parts */
+  height: calc(100% / 16); /* Divides height into 16 equal parts */
+  border: 1px solid #ddd; /* Optional: adds visible grid lines */
   background-color: lightgray;
+  box-sizing: border-box; /* Ensures borders don't affect sizing */
 }
 
 
