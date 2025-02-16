@@ -2,6 +2,13 @@
 const container = document.getElementById("container");
 const resizeBtn = document.getElementById("resizeBtn");
 
+// Function to generate a random RGB color
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
 
 function createGrid(size) {
   container.innerHTML = ""; // Clear previous grid
@@ -12,11 +19,12 @@ function createGrid(size) {
     const square = document.createElement("div");
     square.classList.add("square");
 
-    // Change color on hover
+    // Change to a random color on hover
     square.addEventListener("mouseenter", () => {
-      square.style.backgroundColor = "#333";
+      square.style.backgroundColor = getRandomColor();
     });
 
+    // Revert to default color when mouse leaves
     square.addEventListener("mouseleave", () => {
       square.style.backgroundColor = "lightgray";
     });
