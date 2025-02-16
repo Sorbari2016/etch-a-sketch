@@ -5,11 +5,20 @@
 }
 
 
+
+#resizeBtn {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 #container {
   display: flex;
   flex-wrap: wrap; /* Allows squares to wrap into rows */
-  width: 400px;  /* Fixed width */
-  height: 400px; /* Fixed height */
+  width: 480px;  /* Fixed width */
+  height: 480px; /* Fixed height */
   background-color: black; /* Background to see the grid better */
   border: 2px solid black;
 }
