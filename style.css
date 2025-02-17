@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+
+body {
+  display:flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  background-color: darkgray;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  margin-top: 10px;
+
+}
+
 #resizeBtn {
   padding: 10px 20px;
   font-size: 14px;
@@ -11,6 +28,7 @@
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 10px;
+  background-color: darkgray;
 }
 
 #container {
