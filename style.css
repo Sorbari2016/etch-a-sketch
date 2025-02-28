@@ -47,7 +47,6 @@ h1 {
   height: calc(100% / var(--grid-size)); /* Ensures square shape */
   border: 1px solid #ddd;
   background-color: lightgray;
-  box-sizing: border-box;
 }
 
 

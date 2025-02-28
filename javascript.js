@@ -61,13 +61,15 @@ function darkenColor(color, darknessLevel) {
 
 function createGrid(size) {
   container.innerHTML = ""; // Clear previous grid
+  container.style.setProperty("--grid-size", size); // Update CSS variable
 
   for (let i = 0; i < size * size; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
-    square.dataset.darkness = "0"; // Initialize darkness level
+    square.dataset.darkness = "0";
 
-    // Change to a random color on first hover, then progressively darken
+  
+
     square.addEventListener("mouseenter", () => {
       let darkness = parseInt(square.dataset.darkness);
       if (darkness < 10) {
@@ -97,6 +99,4 @@ resizeBtn.addEventListener("click", () => {
     alert("Invalid input! Please enter a number between 1 and 100.");
   }
 });
-
-
 
